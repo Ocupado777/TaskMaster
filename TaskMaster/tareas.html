@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskMaster | Tareas</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="css/global.css">
+  <!-- Tareas CSS -->
+  <link rel="stylesheet" href="css/tareas.css">
+</head>
+<body class="light">
+
+  <!-- Barra superior con campanita -->
+  <nav class="navbar navbar-light bg-light px-3">
+    <a class="navbar-brand">TaskMaster</a>
+    <div class="ms-auto">
+      <button class="btn btn-outline-secondary position-relative" id="btnNotificaciones">
+        <i class="bi bi-bell"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="contadorNotificaciones">
+          0
+        </span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Modal Notificaciones -->
+  <div class="modal fade" id="modalNotificaciones" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Notificaciones</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="listaNotificaciones">
+          <!-- Aquí se cargan las notificaciones -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-5">
+    <h2 class="text-center mb-4">Gestión de Tareas</h2>
+
+    <!-- Botón para nueva tarea -->
+    <div class="text-end mb-3">
+      <button class="btn btn-primary btn-taskmaster" data-bs-toggle="modal" data-bs-target="#modalNuevaTarea">
+        <i class="bi bi-plus-circle"></i> Nueva Tarea
+      </button>
+    </div>
+
+    <!-- Lista de tareas -->
+    <div id="listaTareas" class="row gy-3"></div>
+  </div>
+
+  <!-- Modal Nueva Tarea -->
+  <div class="modal fade" id="modalNuevaTarea" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Nueva Tarea</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formTarea">
+            <div class="mb-3">
+              <label class="form-label">Título</label>
+              <input type="text" class="form-control" id="titulo" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Descripción</label>
+              <textarea class="form-control" id="descripcion" rows="2"></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Prioridad</label>
+              <select class="form-select" id="prioridad">
+                <option value="Alta">Alta 🔴</option>
+                <option value="Media">Media 🟡</option>
+                <option value="Baja">Baja 🟢</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Fecha límite</label>
+              <input type="date" class="form-control" id="fecha" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Hora límite</label>
+              <input type="time" class="form-control" id="hora" required>
+            </div>
+
+            <!-- Subtareas -->
+            <div id="subtareasContainer" class="mb-3">
+              <label class="form-label">Subtareas</label>
+              <div id="subtareasList"></div>
+              <button type="button" class="btn btn-outline-secondary mt-2" id="btnAgregarSubtarea">
+                <i class="bi bi-plus"></i> Agregar subtarea
+              </button>
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">Guardar Tarea</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Detalle de Tarea -->
+  <div class="modal fade" id="modalDetalleTarea" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Detalle de Tarea</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="detalleTareaBody">
+          <!-- Aquí se cargará dinámicamente el detalle -->
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-success" id="btnPomodoroTarea">
+            <i class="bi bi-hourglass-split"></i> Iniciar Pomodoro
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Global JS -->
+  <script src="js/global.js"></script>
+  <!-- Tareas JS -->
+  <script src="js/tareas.js"></script>
+  <!-- Notificaciones JS -->
+  <script src="js/notificaciones.js"></script>
+</body>
+</html>

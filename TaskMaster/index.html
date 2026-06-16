@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskMaster | Dashboard</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="css/global.css">
+  <!-- Index CSS -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="light">
+    <!-- Barra superior con campanita -->
+  <nav class="navbar navbar-light bg-light px-3">
+    <a class="navbar-brand">TaskMaster</a>
+    <div class="ms-auto">
+      <button class="btn btn-outline-secondary position-relative" id="btnNotificaciones">
+        <i class="bi bi-bell"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="contadorNotificaciones">
+          0
+        </span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Modal Notificaciones -->
+  <div class="modal fade" id="modalNotificaciones" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Notificaciones</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="listaNotificaciones">
+          <!-- Aquí se cargan las notificaciones -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-5">
+    <h2 class="text-center mb-4">Dashboard Principal</h2>
+
+    <div class="row g-4">
+      <!-- Tareas -->
+      <div class="col-md-4">
+        <div class="card shadow-sm p-3">
+          <h5><i class="bi bi-list-check"></i> Tareas</h5>
+          <p id="resumenTareas">0 pendientes, 0 completadas</p>
+          <a href="tareas.html" class="btn btn-primary w-100">Ir a Tareas</a>
+        </div>
+      </div>
+
+      <!-- Calendario -->
+      <div class="col-md-4">
+        <div class="card shadow-sm p-3">
+          <h5><i class="bi bi-calendar-event"></i> Calendario</h5>
+          <p id="resumenCalendario">Próximos eventos</p>
+          <a href="calendario.html" class="btn btn-primary w-100">Ir a Calendario</a>
+        </div>
+      </div>
+
+      <!-- Productividad -->
+      <div class="col-md-4">
+        <div class="card shadow-sm p-3">
+          <h5><i class="bi bi-hourglass-split"></i> Productividad</h5>
+          <p id="resumenProductividad">0 ciclos Pomodoro</p>
+          <a href="productividad.html" class="btn btn-primary w-100">Ir a Productividad</a>
+        </div>
+      </div>
+
+      <!-- Estadísticas -->
+      <div class="col-md-6">
+        <div class="card shadow-sm p-3">
+          <h5><i class="bi bi-bar-chart"></i> Estadísticas</h5>
+          <p id="resumenEstadisticas">0% productividad</p>
+          <a href="estadisticas.html" class="btn btn-primary w-100">Ir a Estadísticas</a>
+        </div>
+      </div>
+
+      <!-- Perfil -->
+      <div class="col-md-6">
+        <div class="card shadow-sm p-3">
+          <h5><i class="bi bi-person-circle"></i> Perfil</h5>
+          <p>Ver datos del usuario</p>
+          <a href="perfil.html" class="btn btn-primary w-100">Ir a Perfil</a>
+        </div>
+      </div>
+
+      <!-- Configuración -->
+      <div class="col-12">
+        <div class="card shadow-sm p-3">
+          <h5><i class="bi bi-gear"></i> Configuración</h5>
+          <p>Personaliza tu experiencia</p>
+          <a href="configuracion.html" class="btn btn-primary w-100">Ir a Configuración</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Global JS -->
+  <script src="js/global.js"></script>
+  <!-- Index JS -->
+  <script src="js/index.js"></script>
+</body>
+</html>
