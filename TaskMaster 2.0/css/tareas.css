@@ -1,0 +1,115 @@
+/* -----------------------------------------------------------
+   TASKMASTER 2.0 — TAREAS CSS
+   Tabla premium + filtros + buscador
+----------------------------------------------------------- */
+
+.tareas-controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+    background: var(--color-card);
+    color: var(--text-main);
+}
+
+.filter-select {
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+    background: var(--color-card);
+    color: var(--text-main);
+}
+
+.tareas-card {
+    padding: 0;
+}
+
+.tareas-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tareas-table thead {
+    background: #1a1a1a;
+}
+
+.tareas-table th {
+    text-align: left;
+    padding: 14px;
+    color: var(--gold);
+    font-size: 14px;
+}
+
+.tareas-table td {
+    padding: 14px;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 14px;
+}
+
+/* PRIORIDADES */
+.tag {
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.tag.alta {
+    background: #ff4d4d; /* rojo */
+    color: #fff;
+}
+
+.tag.media {
+    background: #facc15; /* amarillo */
+    color: #000;
+}
+
+.tag.baja {
+    background: #4ade80; /* verde */
+    color: #000;
+}
+
+
+
+/* ESTADOS */
+.estado {
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+}
+
+.estado.pendiente {
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--gold);
+}
+
+.estado.progreso {
+    background: rgba(80, 140, 255, 0.15);
+    color: #508cff;
+}
+
+.estado.completada {
+    background: rgba(80, 200, 120, 0.15);
+    color: #50c878;
+}
+
+/* MODO CLARO */
+body.light .search-input,
+body.light .filter-select {
+    background: #fff;
+    color: #222;
+}
+
+body.light .tareas-table thead {
+    background: #eaeaea;
+}
+
+body.light .tareas-table td {
+    border-color: #ddd;
+}

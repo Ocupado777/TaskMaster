@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TaskMaster 2.0 — Recordatorios</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/recordatorios.css">
+</head>
+<body>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+
+            <!-- LOGO -->
+            <div class="sidebar-logo">
+                <img src="assets/img/logo.png" class="sidebar-logo-img">
+                <div class="sidebar-logo-text">
+                    <span class="task">TASK</span><span class="master">MASTER</span>
+                    <p class="sidebar-slogan">ORGANIZA · PLANIFICA · LOGRA</p>
+                </div>
+            </div>
+
+            <ul>
+                <li><a href="dashboard.html"><img src="assets/img/icons/dashboard.svg" class="icon"><span>Dashboard</span></a></li>
+                <li><a href="tareas.html"><img src="assets/img/icons/tareas.svg" class="icon"><span>Tareas</span></a></li>
+                <li><a href="calendario.html"><img src="assets/img/icons/calendario.svg" class="icon"><span>Calendario</span></a></li>
+                <li><a href="prioridades.html"><img src="assets/img/icons/prioridades.svg" class="icon"><span>Prioridades</span></a></li>
+                <li><a href="estadisticas.html"><img src="assets/img/icons/estadisticas.svg" class="icon"><span>Estadísticas</span></a></li>
+                <li><a href="recordatorios.html"><img src="assets/img/icons/recordatorios.svg" class="icon"><span>Recordatorios</span></a></li>
+                <li><a href="configuracion.html"><img src="assets/img/icons/configuracion.svg" class="icon"><span>Configuración</span></a></li>
+            </ul>
+
+            <div class="theme-toggle">
+                <img src="assets/img/icons/moon.svg" class="theme-icon" id="theme-icon">
+                <span id="theme-label">Modo oscuro</span>
+                <label class="switch">
+                    <input type="checkbox" id="theme-switch">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="sidebar-user">
+                <p class="user-name"></p>
+                <p class="user-role"></p>
+            </div>
+        </div>
+
+        <!-- CONTENEDOR PRINCIPAL -->
+        <div style="flex: 1; display: flex; flex-direction: column;">
+
+            <!-- HEADER -->
+            <div class="header">
+                <div class="header-left">
+                    <h2>Recordatorios</h2>
+                    <p class="header-subtitle">
+                        Mantén tus tareas importantes siempre presentes.
+                    </p>
+                </div>
+
+                <div class="user-area">
+                    <img src="assets/img/icons/notificaciones.svg" class="icon">
+                    <span class="user-name"></span>
+                    <img src="assets/img/icons/usuario.svg" class="icon">
+                </div>
+            </div>
+
+            <!-- CONTENIDO -->
+            <div class="content fade-in">
+
+                <div class="recordatorios-header">
+                    <button class="btn">+ Nuevo Recordatorio</button>
+                </div>
+
+                <div class="card recordatorios-card">
+
+                    <!-- RECORDATORIO 1 -->
+                    <div class="recordatorio-item">
+                        <div>
+                            <p class="recordatorio-title">Estudiar para el parcial</p>
+                            <p class="recordatorio-time">Hoy · 18:00</p>
+                        </div>
+
+                        <label class="switch-reminder">
+                            <input type="checkbox" checked>
+                            <span class="slider-reminder"></span>
+                        </label>
+                    </div>
+
+                    <!-- RECORDATORIO 2 -->
+                    <div class="recordatorio-item">
+                        <div>
+                            <p class="recordatorio-title">Revisión del proyecto</p>
+                            <p class="recordatorio-time">Mañana · 09:00</p>
+                        </div>
+
+                        <label class="switch-reminder">
+                            <input type="checkbox">
+                            <span class="slider-reminder"></span>
+                        </label>
+                    </div>
+
+                    <!-- RECORDATORIO 3 -->
+                    <div class="recordatorio-item">
+                        <div>
+                            <p class="recordatorio-title">Enviar reporte semanal</p>
+                            <p class="recordatorio-time">Viernes · 14:30</p>
+                        </div>
+
+                        <label class="switch-reminder">
+                            <input type="checkbox" checked>
+                            <span class="slider-reminder"></span>
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/globalUser.js"></script>
+    <script src="js/theme.js"></script>
+
+</body>
+</html>

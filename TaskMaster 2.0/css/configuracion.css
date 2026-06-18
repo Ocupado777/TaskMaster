@@ -1,0 +1,82 @@
+/* -----------------------------------------------------------
+   TASKMASTER 2.0 — CONFIGURACIÓN CSS
+----------------------------------------------------------- */
+
+.config-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.config-card {
+    padding: 20px;
+}
+
+.config-card h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.config-select {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+    background: var(--color-card);
+    color: var(--text-main);
+}
+
+/* COLORES DE ACENTO */
+.color-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.color-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.2s ease;
+}
+
+.color-circle:hover {
+    transform: scale(1.1);
+    border-color: var(--gold);
+}
+
+/* BOTÓN ROJO */
+.btn-danger {
+    background: #ff4d4d;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background: #e63e3e;
+}
+
+/* MODO CLARO */
+body.light .config-select {
+    background: #fff;
+    color: #222;
+}
+
+body.light .color-circle {
+    border-color: #ddd;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+
