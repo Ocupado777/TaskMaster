@@ -1,0 +1,93 @@
+/* -----------------------------------------------------------
+   TASKMASTER 2.0 — RECORDATORIOS CSS
+----------------------------------------------------------- */
+
+.recordatorios-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 18px;
+}
+
+.recordatorios-card {
+    padding: 0;
+}
+
+.recordatorio-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.recordatorio-item:last-child {
+    border-bottom: none;
+}
+
+.recordatorio-title {
+    font-size: 15px;
+    color: var(--text-main);
+}
+
+.recordatorio-time {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* INTERRUPTOR PREMIUM */
+.switch-reminder {
+    position: relative;
+    width: 48px;
+    height: 24px;
+    display: inline-block;
+}
+
+.switch-reminder input {
+    display: none;
+}
+
+.slider-reminder {
+    position: absolute;
+    cursor: pointer;
+    background: #444;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .3s;
+}
+
+.slider-reminder:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 2px;
+    bottom: 2px;
+    background: var(--gold);
+    border-radius: 50%;
+    transition: .3s;
+}
+
+input:checked + .slider-reminder {
+    background: var(--gold-soft);
+}
+
+input:checked + .slider-reminder:before {
+    transform: translateX(24px);
+}
+
+/* MODO CLARO */
+body.light .recordatorio-item {
+    background: #ffffff;
+    border-color: #ddd;
+}
+
+body.light .slider-reminder {
+    background: #ccc;
+}
+
+body.light input:checked + .slider-reminder {
+    background: #e6c76a;
+}

@@ -1,0 +1,76 @@
+/* -----------------------------------------------------------
+   TASKMASTER 2.0 — PERFIL CSS
+----------------------------------------------------------- */
+
+.perfil-card {
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+    align-items: flex-start;
+}
+
+/* AVATAR */
+.perfil-avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.avatar-circle {
+    width: 120px;
+    height: 120px;
+    background: var(--gold);
+    border-radius: 50%;
+    border: 4px solid #333;
+}
+
+/* FORMULARIO */
+.perfil-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.perfil-input,
+.perfil-textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+    background: var(--color-card);
+    color: var(--text-main);
+}
+
+.perfil-textarea {
+    height: 120px;
+    resize: none;
+}
+
+.btn-save {
+    background: var(--gold);
+    color: #000;
+    font-weight: bold;
+}
+
+.btn-save:hover {
+    background: #e6c76a;
+}
+
+/* BOTÓN PEQUEÑO */
+.btn-small {
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+/* MODO CLARO */
+body.light .avatar-circle {
+    border-color: #ddd;
+}
+
+body.light .perfil-input,
+body.light .perfil-textarea {
+    background: #fff;
+    color: #222;
+}

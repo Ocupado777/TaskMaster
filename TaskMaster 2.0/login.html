@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TaskMaster 2.0 — Iniciar Sesión</title>
+
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+    <!-- FONDO DIFUMINADO -->
+    <div class="background"></div>
+
+    <!-- TARJETA -->
+    <div class="login-card">
+
+        <img src="assets/img/logo.png" class="logo">
+
+        <h2>Bienvenido</h2>
+        <p class="subtitle">Inicia sesión para continuar</p>
+
+        <form id="loginForm">
+            
+            <label>Correo electrónico</label>
+            <input type="email" id="email" placeholder="usuario@correo.com">
+            
+            <label>Contraseña</label>
+            <input type="password" id="password" placeholder="••••••••">
+            
+            <p id="loginMessage" class="error-text"></p>        
+            <button class="btn" type="submit">Ingresar</button>
+        </form>
+
+
+        <p class="switch-text">
+            ¿No tienes cuenta?
+            <a href="register.html">Crear cuenta</a>
+        </p>
+
+    </div>
+    <script src="js/login.js"></script>
+
+</body>
+</html>

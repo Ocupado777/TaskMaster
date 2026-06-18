@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TaskMaster 2.0 — Calendario</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/calendario.css">
+</head>
+<body>
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+
+            <!-- LOGO -->
+            <div class="sidebar-logo">
+                <img src="assets/img/logo.png" class="sidebar-logo-img">
+                <div class="sidebar-logo-text">
+                    <span class="task">TASK</span><span class="master">MASTER</span>
+                    <p class="sidebar-slogan">ORGANIZA · PLANIFICA · LOGRA</p>
+                </div>
+            </div>
+
+            <ul>
+                <li><a href="dashboard.html"><img src="assets/img/icons/dashboard.svg" class="icon"><span>Dashboard</span></a></li>
+                <li><a href="tareas.html"><img src="assets/img/icons/tareas.svg" class="icon"><span>Tareas</span></a></li>
+                <li><a href="calendario.html"><img src="assets/img/icons/calendario.svg" class="icon"><span>Calendario</span></a></li>
+                <li><a href="prioridades.html"><img src="assets/img/icons/prioridades.svg" class="icon"><span>Prioridades</span></a></li>
+                <li><a href="estadisticas.html"><img src="assets/img/icons/estadisticas.svg" class="icon"><span>Estadísticas</span></a></li>
+                <li><a href="recordatorios.html"><img src="assets/img/icons/recordatorios.svg" class="icon"><span>Recordatorios</span></a></li>
+                <li><a href="configuracion.html"><img src="assets/img/icons/configuracion.svg" class="icon"><span>Configuración</span></a></li>
+            </ul>
+
+            <div class="theme-toggle">
+                <img src="assets/img/icons/moon.svg" class="theme-icon" id="theme-icon">
+                <span id="theme-label">Modo oscuro</span>
+                <label class="switch">
+                    <input type="checkbox" id="theme-switch">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="sidebar-user">
+                <p class="user-name"></p>
+                <p class="user-role"></p>
+            </div>
+        </div>
+
+        <!-- CONTENEDOR PRINCIPAL -->
+        <div style="flex: 1; display: flex; flex-direction: column;">
+
+            <!-- HEADER -->
+            <div class="header">
+                <div class="header-left">
+                    <h2>Calendario</h2>
+                    <p class="header-subtitle">
+                        Visualiza tus tareas organizadas por fecha y prioridad.
+                    </p>
+                </div>
+
+                <div class="user-area">
+                    <img src="assets/img/icons/notificaciones.svg" class="icon">
+                    <span class="user-name"></span>
+                    <img src="assets/img/icons/usuario.svg" class="icon">
+                </div>
+            </div>
+
+            <!-- CONTENIDO -->
+            <div class="content fade-in">
+
+                <!-- NAV DEL MES -->
+                <div class="calendar-header-bar">
+
+                    <div class="calendar-nav">
+                        <button class="month-btn">←</button>
+                        <span class="calendar-month">Mayo 2026</span>
+                        <button class="month-btn">→</button>
+                    </div>
+
+                    <div class="calendar-legend">
+                        <span class="legend-item alta">Alta prioridad</span>
+                        <span class="legend-item media">Media prioridad</span>
+                        <span class="legend-item baja">Baja prioridad</span>
+                    </div>
+
+                </div>
+
+                <!-- CALENDARIO -->
+                <div class="card calendar-card">
+                    <div class="calendar-grid">
+
+                        <div class="calendar-row calendar-header">
+                            <span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span>
+                        </div>
+
+                        <div class="calendar-row">
+                            <span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                        </div>
+
+                        <div class="calendar-row">
+                            <span>6</span><span>7</span><span>8</span><span>9</span>
+                            <span class="calendar-day alta">
+                                10
+                                <small>Entregar documento</small>
+                            </span>
+                            <span>11</span><span>12</span>
+                        </div>
+
+                        <div class="calendar-row">
+                            <span>13</span><span>14</span><span>15</span>
+                            <span class="calendar-day media">
+                                16
+                                <small>Diseñar interfaz</small>
+                            </span>
+                            <span>17</span><span>18</span><span>19</span>
+                        </div>
+
+                        <div class="calendar-row">
+                            <span>20</span><span>21</span><span>22</span><span>23</span><span>24</span>
+                            <span class="calendar-day baja">
+                                25
+                                <small>Investigar JS</small>
+                            </span>
+                            <span>26</span>
+                        </div>
+
+                        <div class="calendar-row">
+                            <span>27</span><span>28</span><span>29</span>
+                            <span class="calendar-day alta">
+                                30
+                                <small>Parcial</small>
+                            </span>
+                            <span>31</span><span></span><span></span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/globalUser.js"></script>
+    <script src="js/theme.js"></script>
+    
+</body>
+</html>

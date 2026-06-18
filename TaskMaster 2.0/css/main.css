@@ -1,0 +1,396 @@
+/* -----------------------------------------------------------
+   TASKMASTER 2.0 — MAIN CSS PREMIUM
+   Estilo base global, tipografía, colores, layout y efectos
+----------------------------------------------------------- */
+
+/* ------------------------------
+   1. Reset profesional
+------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* ------------------------------
+   2. Tipografía global
+------------------------------ */
+@font-face {
+    font-family: "TimesNewRoman";
+    src: url("../assets/fonts/times-new-roman.ttf") format("truetype");
+}
+
+body {
+    font-family: "TimesNewRoman", serif;
+    background-color: #0d0d0d;
+    color: #e6e6e6;
+}
+
+/* ------------------------------
+   3. Variables globales
+------------------------------ */
+:root {
+    --color-bg: #0d0d0d;
+    --color-bg-light: #1a1a1a;
+    --color-card: #141414;
+    --color-border: #2a2a2a;
+
+    --gold: #D4AF37;
+    --gold-soft: rgba(212, 175, 55, 0.6);
+
+    --text-main: #e6e6e6;
+    --text-muted: #b3b3b3;
+
+    --radius: 12px;
+    --shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+/* ------------------------------
+   4. Scrollbar premium
+------------------------------ */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b8922b;
+}
+
+/* ------------------------------
+   5. Layout base
+------------------------------ */
+.layout {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ------------------------------
+   6. Sidebar base
+------------------------------ */
+/* ------------------------------
+   6. Sidebar base
+------------------------------ */
+.sidebar {
+    width: 260px;
+    background: #0f0f0f;
+    border-right: 1px solid var(--color-border);
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    box-shadow: var(--shadow);
+}
+
+/* LOGO */
+.sidebar-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    gap: 6px;
+}
+
+.sidebar-logo-img {
+    width: 48px;
+    height: 48px;
+}
+
+.sidebar-logo-text {
+    text-align: center;
+}
+
+.sidebar-logo-text span {
+    display: inline; /* ← Esto une TASK + MASTER en una sola línea */
+}
+
+.sidebar-logo-text .task {
+    color: #ffffff;
+}
+
+.sidebar-logo-text .master {
+    color: #d4af37;
+}
+
+.sidebar-slogan {
+    font-size: 10px;
+    margin-top: 2px;
+    color: var(--text-muted);
+}
+
+/* MODO CLARO */
+body.light .sidebar-logo-text .task {
+    color: #000000;
+}
+
+body.light .sidebar-logo-text .master {
+    color: #d4af37;
+}
+
+body.light .sidebar-slogan {
+    color: #555;
+}
+
+/* MENÚ */
+.sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.sidebar li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.sidebar li:hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.sidebar li img {
+    width: 22px;
+    height: 22px;
+}
+
+.sidebar li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text-main);
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: var(--radius);
+    transition: 0.2s ease;
+}
+
+.sidebar li a:hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+/* ------------------------------
+   7. Header base
+------------------------------ */
+.header {
+    width: 100%;
+    height: 70px;
+    background: #111;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    box-shadow: var(--shadow);
+    /* ❌ NO margin-bottom aquí */
+    /* El header debe quedar pegado arriba como en Configuración */
+}
+
+.header .user-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header img {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* ------------------------------
+   8. Contenido principal
+------------------------------ */
+.content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+/* ------------------------------
+   9. Tarjetas premium
+------------------------------ */
+.card {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+/* ------------------------------
+   10. Iconos dorados
+------------------------------ */
+.icon {
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(0 0 4px var(--gold-soft));
+}
+
+/* ------------------------------
+   11. Títulos y textos
+------------------------------ */
+h1, h2, h3 {
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+p {
+    color: var(--text-muted);
+}
+
+/* ------------------------------
+   12. Botones premium
+------------------------------ */
+.btn {
+    padding: 10px 18px;
+    border-radius: var(--radius);
+    border: 1px solid var(--gold);
+    background: transparent;
+    color: var(--gold);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    background: var(--gold);
+    color: #0d0d0d;
+}
+
+/* ------------------------------
+   13. Animaciones suaves
+------------------------------ */
+.fade-in {
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/*-------------------------------
+   14. Cambio de tema
+--------------------------------*/
+.theme-toggle {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+.theme-icon {
+    width: 22px;
+    height: 22px;
+}
+
+/* Interruptor */
+.switch {
+    position: relative;
+    width: 45px;
+    height: 22px;
+    display: inline-block;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background: #444;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .3s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 2px;
+    bottom: 2px;
+    background: var(--gold);
+    border-radius: 50%;
+    transition: .3s;
+}
+
+input:checked + .slider {
+    background: var(--gold-soft);
+}
+
+input:checked + .slider:before {
+    transform: translateX(23px);
+}
+
+/* ------------------------------
+   15. Modo claro
+------------------------------ */
+body.light {
+    background: #f7f7f7;
+    color: #222;
+
+    --text-main: #000000;
+    --text-muted: #555555;
+}
+
+body.light .sidebar {
+    background: #ffffff;
+    border-right: 1px solid #ddd;
+}
+
+body.light .header {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+body.light .card {
+    background: #ffffff;
+    border-color: #ddd;
+}
+
+body.light .sidebar li:hover {
+    background: rgba(212, 175, 55, 0.15);
+}
+
+body.light h1, 
+body.light h2, 
+body.light h3 {
+    color: #b48a1a;
+}
